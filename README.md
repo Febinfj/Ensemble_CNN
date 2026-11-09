@@ -1,18 +1,14 @@
 # Ensemble CNN for Fashion-MNIST Classification
 
-![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange.svg)
-![Python](https://img.shields.io/badge/Python-3.12-blue.svg)
-![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626.svg?logo=jupyter)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
 
-## 📌 Project Overview
+##  Project Overview
 This repository contains a complete Jupyter Notebook implementation of an **Ensemble of Convolutional Neural Networks (CNNs)** for image classification on the **Fashion-MNIST** dataset. It benchmarks an ensemble of 5 bootstrap-trained CNN models (Bagging with soft-voting aggregation) against a baseline single CNN model in a low-sample training regime (50 samples).
 
 All execution steps, model summaries, and interactive training outputs are saved directly inside [`ensemble_cnn.ipynb`](./ensemble_cnn.ipynb).
 
 ---
 
-## 🎯 Objectives & Requirements
+##  Objectives & Requirements
 1. **Load and Prepare Data**:
    - Load the Fashion-MNIST dataset using `keras.datasets.fashion_mnist.load_data()`.
    - Select the first 50 records for training and testing.
@@ -39,7 +35,7 @@ All execution steps, model summaries, and interactive training outputs are saved
 
 ---
 
-## ⚙️ Data Preprocessing Pipeline
+##  Data Preprocessing Pipeline
 
 1. **Dataset Loading**: 
    Loaded using `keras.datasets.fashion_mnist.load_data()`.
@@ -57,7 +53,7 @@ All execution steps, model summaries, and interactive training outputs are saved
 
 ---
 
-## 🧠 Model Architecture
+##  Model Architecture
 
 The individual ensemble models and the baseline single model share an identical CNN topology:
 
@@ -85,7 +81,7 @@ Input: (28, 28, 1)
 
 ---
 
-## 🔁 Ensemble Strategy: Bootstrap Aggregation (Bagging)
+##  Ensemble Strategy: Bootstrap Aggregation (Bagging)
 
 1. **Bootstrap Sampling**:
    For each model $m \in \{1, \dots, 5\}$, a bootstrap dataset $D_m$ of size $N = 40$ is sampled with replacement:
@@ -99,7 +95,7 @@ Input: (28, 28, 1)
 
 ---
 
-## 📊 Results & Performance Comparison
+##  Results & Performance Comparison
 
 The models were evaluated under identical conditions on the validation set (10 samples) and test set (50 samples):
 
@@ -115,7 +111,7 @@ The models were evaluated under identical conditions on the validation set (10 s
 
 ---
 
-## 🚀 How to Run the Notebook
+##  How to Run the Notebook
 
 ### 1. Requirements
 Install the required dependencies:
